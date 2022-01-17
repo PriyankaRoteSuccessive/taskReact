@@ -99,9 +99,9 @@ const Modals = () =>{
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={'Trainee'}>Trainee</MenuItem>
-          <MenuItem value={'Trainer'}>Trainer</MenuItem>
-          <MenuItem value={'Expert'}>Expert</MenuItem>
+          <MenuItem value={'Trainee '}>Trainee</MenuItem>
+          <MenuItem value={'Trainer '}>Trainer</MenuItem>
+          <MenuItem value={'Expert '}>Expert</MenuItem>
         </Select>
         <br></br>
         <TextareaAutosize
