@@ -1,0 +1,54 @@
+{
+    "users":[
+        {
+            "id": 1,
+            "username": "Priyanka",
+            "email": "priyanka@gmail.com"
+        },
+        {
+            "id": 2,
+            "username": "Shirin",
+            "email": "shirin@gmail.com"
+        },
+        {
+            "id": 3,
+            "username": "Amruta",
+            "email": "amruta@gmail.com"
+            
+        },
+        {
+            "id": 4,
+            "username": "Shantanu",
+            "email": "shantanu@gmail.com"
+        },
+        {
+            "id": 5,
+            "username": "Nishit",
+            "email": "nishit@gmail.com"
+        },
+        {
+            "id": 6,
+            "username": "Rupali",
+            "email": "rupali@gmail.com"
+        },
+        {
+            "id": 7,
+            "username": "Kashinath",
+            "email": "kashinath@gmail.com"
+        },
+        {
+            "id": 8,
+            "username": "Adeeb",
+            "email": "adeeb@gmail.com"
+        },
+        {
+            "id": 9,
+            "username": "Ram",
+            "email": "ram@gmail.com"
+        },
+        {
+            "id": 10,
+            "username": "Utsav",
+            "email": "utsav@gmail.com"
+        }
+    ]}

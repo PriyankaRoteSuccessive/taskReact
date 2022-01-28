@@ -85,3 +85,10 @@ export const InputField = styled.input`
         export const Mylabel = styled.div`
         margin-left: 50px;
         color:rgb(200,145,170);`
+        export const regStyle = styled.div`
+          width: 400px;
+          margin: 5% 35%;
+          align-items: center;
+          padding: 20px 10px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        `

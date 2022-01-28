@@ -22,12 +22,14 @@ class Counter extends React.Component
     {
         return(
             <>
+             <p>{this.state.count}</p>
+             <br></br>
             <button onClick={()=>this.increment()} >ADDITION</button>
-            
+            <br></br>  <br></br>
             <button onClick={()=>this.decrement()} >SUBTRACTION</button>
-
-            <button onClick={()=>this.reset()}>Reset</button>
-            <p>{this.state.count}</p>
+            <br></br>  <br></br>
+            <button onClick={()=>this.reset()}>RESET</button>
+            <br></br>  <br></br>
            
             </>
         )

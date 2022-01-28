@@ -1,6 +1,5 @@
-import {useState} from "react"
-import {useNavigate} from "react-router-dom"
-import  Data  from "./data";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import { InputField,Mylabel } from "../component/style";
 import { Header } from "../module";
 const Login =()=>{
@@ -12,7 +11,7 @@ const Login =()=>{
         }
     )
     let navigate = useNavigate();
-    const HandleChange =() =>{
+    const handleChange =(e) =>{
       setUsers({
             ...users,
             name:document.getElementById("name").value,
@@ -29,11 +28,11 @@ const Login =()=>{
         <Header/>
              <div>
              <Mylabel>Name</Mylabel>
-             <InputField type="text" id="name" placeholder="Enter Username" onChange={HandleChange}/>  
-             <Mylabel>email</Mylabel>
-             <InputField type="email" id="email" placeholder="Enter email" onChange={HandleChange}  />
+             <InputField type="text" id="name" placeholder="Enter Username" onChange={handleChange}/>  
+             <Mylabel>Email</Mylabel>
+             <InputField type="email" id="email" placeholder="Enter email" onChange={handleChange}  />
              <Mylabel>Password</Mylabel> 
-             <InputField type="password" id="password" placeholder="Enter Password" onChange={HandleChange}  />  
+             <InputField type="password" id="password" placeholder="Enter Password" onChange={handleChange}  />  
              <button onClick={redirectHandler}> Submit</button>
          </div>
         </>
