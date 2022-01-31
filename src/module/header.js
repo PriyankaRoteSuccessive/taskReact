@@ -3,7 +3,7 @@ const Header = () =>{
     return(
         <div>
             <DashUl>
-                <DashLi><a href="./">Dashboard</a></DashLi>
+                <DashLi><a href="">Dashboard</a></DashLi>
                 <DashLi><a href="/contact" >Contact</a></DashLi>
                 <DashLi><a href= "/about" >About us</a></DashLi>
                 <DashLi><a href= "/login" >Login</a></DashLi>

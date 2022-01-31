@@ -9,16 +9,9 @@ const Dashboard = () =>{
     const themes =useContext(ThemeContext)
     return(
         <>
-        {/* <div style={themes.theme}> */}
         <Header/>
-        <ShowdataTable/>
         <DashHead>Welcome to dashboards</DashHead>
-        <MyButton name=" My Button" class="variant" />
-        <Counter/>
-        <Timer/>
-        <Timer20/>
-        <ThemeSwitcher/>
-        {/* </div> */}
+        <ShowdataTable/>
         </>  
     )
 }

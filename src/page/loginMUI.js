@@ -9,7 +9,7 @@ import ThemeContext from "../context/ThemeContext"
 import ThemeSwitcher from "../component/ThemeSwitcher";
 import { useContext } from "react";
   const LoginMUI = () =>{ 
-    const themes =useContext(ThemeContext)
+    // const themes =useContext(ThemeContext)
   // const [mail, setEmail] = useState('');
   // const [pwd, setPwd] = useState('');
   const [users,setUsers] =useState(
@@ -75,8 +75,9 @@ import { useContext } from "react";
       ) : (
         <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       )}
-    <div className='regStyle' onSubmit={handleSubmit} style={themes.theme}>
-    <ThemeSwitcher/>
+    <div className='regStyle' onSubmit={handleSubmit} >
+    {/* style={themes.theme} */}
+    
     <Box
       sx={{
         alignItems: 'center',
@@ -113,6 +114,7 @@ import { useContext } from "react";
    <h4>OR</h4>
    <Button variant="contained"onClick={redirectHandler}>Register</Button>
     </Box>
+    <ThemeSwitcher/>
     </div>
     </>
   );

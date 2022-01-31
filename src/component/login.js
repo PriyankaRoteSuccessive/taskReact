@@ -26,15 +26,12 @@ const Login =()=>{
     return(
         <>
         <Header/>
-             <div>
-             <Mylabel>Name</Mylabel>
-             <InputField type="text" id="name" placeholder="Enter Username" onChange={handleChange}/>  
-             <Mylabel>Email</Mylabel>
-             <InputField type="email" id="email" placeholder="Enter email" onChange={handleChange}  />
-             <Mylabel>Password</Mylabel> 
+            
+             <InputField type="text" id="name" placeholder="Enter Username" onChange={handleChange}/>            
+             <InputField type="email" id="email" placeholder="Enter email" onChange={handleChange}  /> 
              <InputField type="password" id="password" placeholder="Enter Password" onChange={handleChange}  />  
              <button onClick={redirectHandler}> Submit</button>
-         </div>
+         
         </>
     )
 }
