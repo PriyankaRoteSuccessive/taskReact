@@ -3,7 +3,7 @@
     {
       "id": 1,
       "username": "Priyanka",
-      "email": "priyanka@gmail.com"
+      "email": "priya@gmail.com"
     },
     {
       "id": 2,
@@ -13,147 +13,52 @@
     {
       "id": 3,
       "username": "Amruta",
-      "email": "amruta@gmail.com"
+      "email": "Amruta@gmail.com"
     },
     {
       "id": 4,
-      "username": "Shantanu",
-      "email": "shantanu@gmail.com"
-    },
-    {
-      "id": 5,
-      "username": "Nishit",
-      "email": "nishit@gmail.com"
-    },
-    {
-      "id": 6,
       "username": "Rupali",
       "email": "rupali@gmail.com"
     },
     {
-      "id": 7,
-      "username": "Kashinath",
-      "email": "kashinath@gmail.com"
-    },
-    {
-      "id": 8,
-      "username": "Adeeb",
-      "email": "adeeb@gmail.com"
-    },
-    {
-      "id": 9,
-      "username": "Ram",
-      "email": "ram@gmail.com"
-    },
-    {
-      "id": 10,
-      "username": "Utsav",
-      "email": "utsav@gmail.com"
-    },
-    {
-      "id": 11,
-      "username": "Priyanka",
-      "email": "priyanka@gmail.com"
-    },
-    {
-      "id": 12,
-      "username": "Shirin",
-      "email": "shirin@gmail.com"
-    },
-    {
-      "id": 13,
-      "username": "Amruta",
-      "email": "amruta@gmail.com"
-    },
-    {
-      "id": 14,
-      "username": "Shantanu",
-      "email": "shantanu@gmail.com"
-    },
-    {
-      "id": 15,
-      "username": "Nishit",
-      "email": "nishit@gmail.com"
-    },
-    {
-      "id": 16,
-      "username": "Rupali",
-      "email": "rupali@gmail.com"
-    },
-    {
-      "id": 17,
-      "username": "Kashinath",
-      "email": "kashinath@gmail.com"
-    },
-    {
-      "id": 18,
-      "username": "Adeeb",
-      "email": "adeeb@gmail.com"
-    },
-    {
-      "id": 19,
-      "username": "Ram",
-      "email": "ram@gmail.com"
-    },
-    {
-      "id": 20,
-      "username": "Utsav",
-      "email": "utsav@gmail.com"
-    },
-    {
-      "id": 21,
-      "username": "Priyanka",
-      "email": "priyanka@gmail.com"
-    },
-    {
-      "id": 22,
-      "username": "Shirin",
-      "email": "shirin@gmail.com"
-    },
-    {
-      "id": 23,
-      "username": "Amruta",
-      "email": "amruta@gmail.com"
-    },
-    {
-      "id": 24,
-      "username": "Shantanu",
-      "email": "shantanu@gmail.com"
-    },
-    {
-      "id": 25,
-      "username": "Nishit",
-      "email": "nishit@gmail.com"
-    },
-    {
-      "id": 26,
-      "username": "Rupali",
-      "email": "rupali@gmail.com"
-    },
-    {
-      "id": 27,
-      "username": "Kashinath",
-      "email": "kashinath@gmail.com"
-    },
-    {
-      "id": 28,
-      "username": "Adeeb",
-      "email": "adeeb@gmail.com"
-    },
-    {
-      "id": 29,
-      "username": "Ram",
-      "email": "ram@gmail.com"
-    },
-    {
-      "id": 30,
-      "username": "Utsav",
-      "email": "utsav@gmail.com"
-    },
-    {
-      "id": "41",
-      "userName": "Sonu",
+      "id": "5",
+      "username": "Sonu",
       "email": "sonu@gmail.com"
+    },
+    {
+      "id": "6",
+      "username": "Pri",
+      "email": "pri@12.com"
+    },
+    {
+      "id": "7",
+      "username": "Amru",
+      "email": "amru@12.com"
+    },
+    {
+      "id": "8",
+      "username": "Amit",
+      "email": "amit@12.com"
+    },
+    {
+      "id": "9",
+      "username": "Monu",
+      "email": "monu@123.com"
+    },
+    {
+      "id": "10",
+      "username": "Adeeb",
+      "email": "adeeb@12.com"
+    },
+    {
+      "id": "11",
+      "username": "shantu",
+      "email": "shantu@12.com"
+    },
+    {
+      "id": "13",
+      "username": "raj",
+      "email": "raj@gmail.com"
     }
   ]
 }

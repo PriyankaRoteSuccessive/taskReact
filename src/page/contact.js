@@ -1,6 +1,6 @@
 import { DashHead } from "../component/style";
 import { MyButton} from "../component/index";
-import { Header, ShowdataTable } from "../module/index";
+import { Header } from "../module/index";
 import { Counter,Timer, Timer20} from "../component/index";
 import ThemeContext from "../context/ThemeContext"
 import ThemeSwitcher from "../component/ThemeSwitcher";
@@ -9,7 +9,7 @@ const Contact = () =>{
     const themes =useContext(ThemeContext)
     return(
         <>
-         <div style={themes.theme}>  
+         {/* <div style={themes.theme}>   */}
         <Header/>
         <DashHead>Welcome to Contact page</DashHead>
         <MyButton name=" My Button" class="variant" />
@@ -17,7 +17,7 @@ const Contact = () =>{
         <Timer/>
         <Timer20/>
         <ThemeSwitcher/>
-     </div>  
+     {/* </div>   */}
         </>  
     )
 }
