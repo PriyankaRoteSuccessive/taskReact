@@ -3,17 +3,17 @@
     {
       "id": 1,
       "username": "Priyanka",
-      "email": "priya@gmail.com"
+      "email": "priyanka@gmail.com"
     },
     {
       "id": 2,
-      "username": "Shirin",
+      "username": "Shirin12",
       "email": "shirin@gmail.com"
     },
     {
       "id": 3,
       "username": "Amruta",
-      "email": "Amruta@gmail.com"
+      "email": "amruta@gmail.com"
     },
     {
       "id": 4,
@@ -22,43 +22,18 @@
     },
     {
       "id": "5",
-      "username": "Sonu",
-      "email": "sonu@gmail.com"
+      "username": "Ram",
+      "email": "ram@gmail.com"
     },
     {
       "id": "6",
-      "username": "Pri",
-      "email": "pri@12.com"
+      "username": "Shivani",
+      "email": "shivani@gmail.com"
     },
     {
       "id": "7",
-      "username": "Amru",
-      "email": "amru@12.com"
-    },
-    {
-      "id": "8",
-      "username": "Amit",
-      "email": "amit@12.com"
-    },
-    {
-      "id": "9",
-      "username": "Monu",
-      "email": "monu@123.com"
-    },
-    {
-      "id": "10",
-      "username": "Adeeb",
-      "email": "adeeb@12.com"
-    },
-    {
-      "id": "11",
-      "username": "shantu",
-      "email": "shantu@12.com"
-    },
-    {
-      "id": "13",
-      "username": "raj",
-      "email": "raj@gmail.com"
+      "username": "Ameya",
+      "email": "ameya@gmail.com"
     }
   ]
 }

@@ -6,6 +6,8 @@ import PublicRoute from "./router/PublicRouter";
 import{ CrudTask, ShowTable} from "./Crud";
 import ShowTableData from "./Crud/ShowTableData";
 import Created from "./Crud/Created";
+import { Edit} from "./Crud/index"
+import CrudTable from "./Crud/CrudTable";
 const Router = (props) =>{
     console.log("my data is",props.persondata)
     return(
@@ -27,7 +29,8 @@ const Router = (props) =>{
             <Route path="/ShowTableData" element={<ShowTableData/>} />
             <Route path="/Created" element={<Created/>} />
             <Route path="/CrudTask" element={<CrudTask/>} />
-
+            <Route path="/edit/1" element={<Edit/>} />
+            <Route path="/crudTable" element={<CrudTable/>} />
 
         </Routes>
         </BrowserRouter>

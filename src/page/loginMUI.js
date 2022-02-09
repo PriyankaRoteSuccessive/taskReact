@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import App from '../App.css'
 import {useNavigate} from "react-router-dom"
 import { useState,useEffect} from 'react';
 import ThemeContext from "../context/ThemeContext"
