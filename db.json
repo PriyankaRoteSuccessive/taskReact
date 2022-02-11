@@ -1,39 +1,19 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "Priyanka",
-      "email": "priyanka@gmail.com"
-    },
-    {
-      "id": 2,
-      "username": "Shirin12",
-      "email": "shirin@gmail.com"
-    },
-    {
-      "id": 3,
-      "username": "Amruta",
-      "email": "amruta@gmail.com"
-    },
-    {
-      "id": 4,
-      "username": "Rupali",
-      "email": "rupali@gmail.com"
-    },
-    {
-      "id": "5",
-      "username": "Ram",
-      "email": "ram@gmail.com"
-    },
-    {
-      "id": "6",
-      "username": "Shivani",
-      "email": "shivani@gmail.com"
-    },
-    {
-      "id": "7",
+      "id": "1",
       "username": "Ameya",
       "email": "ameya@gmail.com"
+    },
+    {
+      "id": "2",
+      "username": "Priyanka",
+      "email": "pri@gmail.com"
+    },
+    {
+      "id": "3",
+      "username": "Abhijit",
+      "email": "abhi@gmail.com"
     }
   ]
 }

@@ -18,249 +18,249 @@ import axios from "axios";
 import { Header } from '../module';
 import Validation from "./validation";
 
-const CrudTable =()=>{
-// const emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// const emailRegex=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
- 
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
-  },
-}));
+const CrudTable = () => {
+  // const emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  // const emailRegex=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  '&:last-child td, &:last-child th': {
-    border: 0,
-  },
-}));
+  const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    [`&.${tableCellClasses.head}`]: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    [`&.${tableCellClasses.body}`]: {
+      fontSize: 14,
+    },
+  }));
 
-const [id,setId]=useState("");
-const [username,setName]=useState("");
-const [email,setEmail]=useState("");
-const [data,setData]=React.useState([])
-const [open, setOpen] = useState(false);
-const [opendata,setOpenData] = useState(false);
-let nameRegEx = /^[A-Za-z]+$/
-let emailRegEx = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
-//   const initialValues = { username: "", email: "", password: "" };
-//   const [formValues, setFormValues] = useState(initialValues);
-//   const [formErrors, setFormErrors] = useState({});
-//   const [isSubmit, setIsSubmit] = useState(false);
-// const [state, setState] = useState({
-//     username: "",
-//     email: "",
-//     password: ""
-//   });
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormValues({ ...formValues, [name]: value });
-//   };
+  const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+      border: 0,
+    },
+  }));
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setFormErrors(validate(formValues));
-//     setIsSubmit(true);
-//   };
-// const handleSubmit = (event) => {
-//     if((state.username == "") || (state.email == ""))
-//     {
-//       alert("Please Fill All Required Fields");
-//       event.preventDefault();
-//     }    
-//     else 
-//     if (!state.email.length) {
-//       alert('Please Enter Valid Email');
-//       event.preventDefault();
-//     } 
-//     else if (!emailRegex.test(state.email)) {
-//       alert('Please Enter Valid Email');
-//       event.preventDefault();
-//     }
-//    else{
-//     event.preventDefault();
-//     console.log(state);
-//     console.log(`Name: `+ state.username +`, Email: ` + state.email );
-//     alert(`Successfully Form Submit. Your Name: `+ state.username +`, Email: `+ state.email +``);
-//    }
-//   };
-// const handleInputChange = (event) => {
-//     setState((prevProps) => ({
-//       ...prevProps,
-//       [event.target.username]: event.target.value
-//     }));
-//   };
-const handleOpen = () => {
+  const [id, setId] = useState("");
+  const [username, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [data, setData] = useState([])
+  const [open, setOpen] = useState(false);
+  const [opendata, setOpenData] = useState(false);
+  let nameRegEx = /^[A-Za-z]+$/
+  let emailRegEx = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
+  //   const initialValues = { username: "", email: "", password: "" };
+  //   const [formValues, setFormValues] = useState(initialValues);
+  //   const [formErrors, setFormErrors] = useState({});
+  //   const [isSubmit, setIsSubmit] = useState(false);
+  // const [state, setState] = useState({
+  //     username: "",
+  //     email: "",
+  //     password: ""
+  //   });
+  //   const handleChange = (e) => {
+  //     const { name, value } = e.target;
+  //     setFormValues({ ...formValues, [name]: value });
+  //   };
+
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     setFormErrors(validate(formValues));
+  //     setIsSubmit(true);
+  //   };
+  // const handleSubmit = (event) => {
+  //     if((state.username == "") || (state.email == ""))
+  //     {
+  //       alert("Please Fill All Required Fields");
+  //       event.preventDefault();
+  //     }    
+  //     else 
+  //     if (!state.email.length) {
+  //       alert('Please Enter Valid Email');
+  //       event.preventDefault();
+  //     } 
+  //     else if (!emailRegex.test(state.email)) {
+  //       alert('Please Enter Valid Email');
+  //       event.preventDefault();
+  //     }
+  //    else{
+  //     event.preventDefault();
+  //     console.log(state);
+  //     console.log(`Name: `+ state.username +`, Email: ` + state.email );
+  //     alert(`Successfully Form Submit. Your Name: `+ state.username +`, Email: `+ state.email +``);
+  //    }
+  //   };
+  // const handleInputChange = (event) => {
+  //     setState((prevProps) => ({
+  //       ...prevProps,
+  //       [event.target.username]: event.target.value
+  //     }));
+  //   };
+  const handleOpen = () => {
     setOpen(true);
-    
-};
-const handleOpenData = () =>{
+
+  };
+  const handleOpenData = () => {
     setOpenData(true);
-}
-const handleClose = () => {
+  }
+  const handleClose = () => {
     setOpen(false);
     setId('');
-   setName('');
-   setEmail('');
-};
-const handleClosed = () => {
+    setName('');
+    setEmail('');
+  };
+  const handleClosed = () => {
     setOpen(false);
-};
-useEffect(() => {
+  };
+  useEffect(() => {
     getData();
-},
-[]);
-//     console.log(formErrors);
-//     if (Object.keys(formErrors).length === 0 && isSubmit) {
-//       console.log(formValues);
-//     }
-//   }, [formErrors]);
- 
+  },
+    []);
+  //     console.log(formErrors);
+  //     if (Object.keys(formErrors).length === 0 && isSubmit) {
+  //       console.log(formValues);
+  //     }
+  //   }, [formErrors]);
 
-function getData() {
+
+  function getData() {
     axios
-    .get("http://localhost:3001/users")
-    .then((response) => {
-      setData(response.data);
-    })
-}
-function addData() {
+      .get("http://localhost:3001/users")
+      .then((response) => {
+        setData(response.data);
+      })
+  }
+  const addData = ()=> {
     let x = { username, email }
     let nameCheck = nameRegEx.test(x.username)
-        let emailCheck = emailRegEx.test(x.email)
+    let emailCheck = emailRegEx.test(x.email)
 
-        if (nameCheck && emailCheck) {
-    axios.post('http://localhost:3001/users', {
-         id: id,
-         username: username,
-         email: email
-       })
-         .then((response) => {
-           getData(response.data);
-         })
-         setOpenData(false);
-        }
- }
- function editData(userid) {
+    if (nameCheck && emailCheck) {
+      axios.post('http://localhost:3001/users', {
+        id: id,
+        username: username,
+        email: email
+      })
+        .then((response) => {
+          getData(response.data);
+        })
+      setOpenData(false);
+    }
+  }
+  const editData=(userid) => {
     setOpen(true);
     const item = data[userid - 1];
     setId(item.id);
     setName(item.username)
     setEmail(item.email)
-    
-}
- function update() {
+
+  }
+  const update =()=> {
     axios.put(`http://localhost:3001/users/${id}`,
-         {
-            id: id,
-            username: username,
-            email: email
-          })
-            .then((response) => {
-              console.log("resp is", response)
-              getData(response.data);
-            })
-         setOpen(false);
-}
+      {
+        id: id,
+        username: username,
+        email: email
+      })
+      .then((response) => {
+        console.log("resp is", response)
+        getData(response.data);
+      })
+    setOpen(false);
+  }
 
-function deleteUser(id) {
+const deleteUser=(id)=> {
     axios.delete(`http://localhost:3001/users/${id}`)
-    .then((response) => {
-      getData(response.data);
-    })
-}
+      .then((response) => {
+        getData(response.data);
+      })
+  }
 
-// const validate = (values) => {
-//     const errors = {};
-//     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-//     if (!values.username) {
-//       errors.username = "Username is required!";
-//     }
-//     if (!values.email) {t="standard"  
-//       errors.email = "Email is required!";
-//     } else if (!regex.test(values.email)) {
-//       errors.email = "This is not a valid email format!";
-//     }
-//     return errors;
-//   };
+  // const validate = (values) => {
+  //     const errors = {};
+  //     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  //     if (!values.username) {
+  //       errors.username = "Username is required!";
+  //     }
+  //     if (!values.email) {t="standard"  
+  //       errors.email = "Email is required!";
+  //     } else if (!regex.test(values.email)) {
+  //       errors.email = "This is not a valid email format!";
+  //     }
+  //     return errors;
+  //   };
 
   return (
-      <>
-       {/* <form onSubmit={handleSubmit}> */}
-      <Header/>
-    {/* ADD Button */}
-    <Button variant="outlined" onClick={handleOpenData}>Add User</Button>
-    <Dialog open={opendata} onClose={handleClosed}>
-    <DialogTitle>Enter Detail's</DialogTitle>
-    <DialogContent>
-    <TextField autoFocus margin="dense" id="id" label="Id" type="Id" fullWidth variant="standard" value={id}
-     onChange={(e) => setId(e.target.value)}/>
-    <TextField autoFocus margin="dense" id="userName" label="UserName" type="userName" fullWidth variant="standard"  value={username}
-    onChange={(e) => setName(e.target.value)}         />
-    {/* //   onChange={handleInputChange} */}
-      {/* <p>{formErrors.username}</p> */}
-    <TextField autoFocus margin="dense" id="name" label="Email Address" type="email" fullWidth variant="standard"  value={email}
-     onChange={(e) => setEmail(e.target.value)} />
-    {/* //  onChange={(e) => setEmail(e.target.value)} onChange={handleInputChange} */}
-     {/* <p>{formErrors.email}</p> */}
-    </DialogContent>
-    <DialogActions>
-     <Button onClick={handleClose}>Cancel</Button>
-     <Button  onClick={addData}>Add Data</Button>
-    </DialogActions>
-    </Dialog>
-{/* Edit */}
+    <>
+      {/* <form onSubmit={handleSubmit}> */}
+      <Header />
+      {/* ADD Button */}
+      <Button variant="outlined" onClick={handleOpenData}>Add User</Button>
+      <Dialog open={opendata} onClose={handleClosed}>
+        <DialogTitle>Enter Detail's</DialogTitle>
+        <DialogContent>
+          <TextField autoFocus margin="dense" id="id" label="Id" type="Id" fullWidth variant="standard" value={id}
+            onChange={(e) => setId(e.target.value)} />
+          <TextField autoFocus margin="dense" id="userName" label="UserName" type="userName" fullWidth variant="standard" value={username}
+            onChange={(e) => setName(e.target.value)} />
+          {/* //   onChange={handleInputChange} */}
+          {/* <p>{formErrors.username}</p> */}
+          <TextField autoFocus margin="dense" id="name" label="Email Address" type="email" fullWidth variant="standard" value={email}
+            onChange={(e) => setEmail(e.target.value)} />
+          {/* //  onChange={(e) => setEmail(e.target.value)} onChange={handleInputChange} */}
+          {/* <p>{formErrors.email}</p> */}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={addData}>Add Data</Button>
+        </DialogActions>
+      </Dialog>
+      {/* Edit */}
 
-    <Dialog open={open} onClose={handleClose}>
-    <DialogTitle>Edit User</DialogTitle>
-    <DialogContent>
-    <TextField autoFocus margin="dense" id="id" label="Id" type="Id" fullWidth variant="standard" value={id}
-     onChange={(e) => setId(e.target.value)}/>
-    <TextField autoFocus margin="dense" id="userName" label="UserName" type="userName" fullWidth variant="standard" value={username}
-     onChange={(e) => setName(e.target.value)}/>
-      {/* <p>{formErrors.username}</p> */}
-    <TextField autoFocus margin="dense" id="name" label="Email Address" type="email" fullWidth variant="standard" value={email}
-     onChange={(e) => setEmail(e.target.value)}/>
-      {/* <p>{formErrors.email}</p> */}
-    </DialogContent>
-    <DialogActions>
-     <Button onClick={handleClose}>Cancel</Button>
-    <Button type="submit" onClick={update}>Update</Button>
-    </DialogActions>
-    </Dialog>
-{/* Table  */}
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell align="right">ID</StyledTableCell>
-            <StyledTableCell align="right">Name</StyledTableCell>
-            <StyledTableCell align="right">Email</StyledTableCell>
-            <StyledTableCell align="right">Action</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell align="right">{row.id}</StyledTableCell>
-              <StyledTableCell align="right">{row.username}</StyledTableCell>
-              <StyledTableCell align="right">{row.email}</StyledTableCell>
-              <StyledTableCell align="right">
-                <Button  variant="contained" style={{marginRight:10}} onClick={() => editData(row.id)} >Edit</Button>
-                <Button  variant="contained" onClick={() => deleteUser(row.id)}>Delete</Button> </StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    {/* </form> */}
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Edit User</DialogTitle>
+        <DialogContent>
+          <TextField autoFocus margin="dense" id="id" label="Id" type="Id" fullWidth variant="standard" value={id}
+            onChange={(e) => setId(e.target.value)} />
+          <TextField autoFocus margin="dense" id="userName" label="UserName" type="userName" fullWidth variant="standard" value={username}
+            onChange={(e) => setName(e.target.value)} />
+          {/* <p>{formErrors.username}</p> */}
+          <TextField autoFocus margin="dense" id="name" label="Email Address" type="email" fullWidth variant="standard" value={email}
+            onChange={(e) => setEmail(e.target.value)} />
+          {/* <p>{formErrors.email}</p> */}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button type="submit" onClick={update}>Update</Button>
+        </DialogActions>
+      </Dialog>
+      {/* Table  */}
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell align="right">ID</StyledTableCell>
+              <StyledTableCell align="right">Name</StyledTableCell>
+              <StyledTableCell align="right">Email</StyledTableCell>
+              <StyledTableCell align="right">Action</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell align="right">{row.id}</StyledTableCell>
+                <StyledTableCell align="right">{row.username}</StyledTableCell>
+                <StyledTableCell align="right">{row.email}</StyledTableCell>
+                <StyledTableCell align="right">
+                  <Button variant="contained" style={{ marginRight: 10 }} onClick={() => editData(row.id)} >Edit</Button>
+                  <Button variant="contained" onClick={() => deleteUser(row.id)}>Delete</Button> </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      {/* </form> */}
     </>
   );
 }
